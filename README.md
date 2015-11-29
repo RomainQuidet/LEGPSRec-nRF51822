@@ -51,7 +51,7 @@ Please note that the UART I/O are **3.3v only!** Raspberry Pi is ok, Arduino are
 ### 2.3 - Sentences
 Once the UART connected and LE GPS bonded, you'll receive a stream of ASCII bytes.
 
-For easy parsing, each line is terminated by \r\n characters (0x0A 0x0D).
+For easy parsing, each line is terminated by \r\n characters (0x0D 0x0A).
 
 The data sentences start with a $ character and data are comma ( , ) separated.
 
