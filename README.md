@@ -3,12 +3,15 @@ LE GPS Receiver is a Bluetooth 4.0 Smart Location & Navigation Service central a
 
 Its purpose is to receive the GPS location streamed by the peripheral and expose the received data in a comprehensive way.
 
-TODO link to transmitter
+Here is LE GPS app transmitter for iOS:
+[LE GPS app](https://geo.itunes.apple.com/fr/app/le-gps/id894338634?mt=8)
 
 ## 1 - Hardware target
 This receiver version is dedicated to the **nRF51822** excellent Bluetooth 4.0 Low Energy SoC designed by Nordic. 
 
-TODO link to nRF / Nodric
+[Nordic nRF51822](https://www.nordicsemi.com/eng/Products/Bluetooth-Smart-Bluetooth-low-energy/nRF51822)
+
+One of the best ready to use submodule on the market is the MDBT40 from Raytac.
 
 ## 2 - Free firmware
 This **free firmware** can run on any nRF51822 with this capabilities:
@@ -16,13 +19,18 @@ This **free firmware** can run on any nRF51822 with this capabilities:
   * 256 KB of flash.
   * 32 KB of RAM.
 
-Please note that you may find previous revisions of this SoC with 128 KB of Flash or 16 KB of RAM. This firmware may or may not work on it, as it is untested for the moment. 
+>Please note that you may find previous revisions of this SoC with 128 KB of Flash or 16 KB of RAM. This firmware may or may not work on it, as it is untested for the moment. 
 
-Specially designed for happy hobbyists, this version has been tested and runs on the RedbearLab Nano board v1.5. (v1.0 has only 16KB of RAM, it might work, but I've didn't try).
+Specially designed for happy hobbyists, this version has been tested and runs on the **RedbearLab Nano** board v1.5. (v1.0 has only 16KB of RAM, it might work, but I didn't try).
 
-TODO ReadbearLab logo, link, image?
+![alt text](http://static1.squarespace.com/static/5039e08be4b00cf0e8cf88cd/t/541d3d4be4b0256ed580a338/1411202380288/soldered.jpg?format=300w)
 
-The Nano board is based on the MDBT40 from Raytac. So if you use this submodule, it will work too. 
+[RedbearLab Nano board](http://redbearlab.com/blenano/)
+
+Use the MK20 RedbearLab USB board to flash this firmware. This firmware already contains the S120 Softdevice.
+
+If you don't feel soldering or flashing, I sell ready to use Nano boards. Contact me for that.
+
 
 ### 2.1 - Pairing
 The pairing with LE GPS transmitter is really easy and automatic. Turn on LE GPS or any other standard LNS capable device.
@@ -32,7 +40,7 @@ Turn on your nRF51822 board. LE GPS Receiver firmware boots up and starts to sca
 ### 2.2 - Output
 This free version will ouptut data to the **UART**:
 
-* 38200 BAUD rate
+* 38400 Baud rate
 * 8n1
 * No flow controll
 
@@ -50,13 +58,13 @@ The data sentences start with a $ character and data are comma ( , ) separated.
 #### Boot header
 When the device is powered up, it shows this header
 
-
 ```
-***********************************
-
-***********************************
+*********************************
+Copyright (c) 2015 XD Appfactory.
+All Rights Reserved.
+LEGPS receiver free version 1.0
+*********************************
 ```
-
 
 #### Position
 Once the GPS send a valid position, you'll receive this sentence:
