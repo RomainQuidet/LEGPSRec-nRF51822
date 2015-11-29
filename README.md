@@ -46,7 +46,7 @@ This free version will ouptut data to the **UART**:
 
 This allows you to directly get bytes on an Arduino or a Raspberry Pi for example.
 
-Please note that the UART I/O are **3.3v only!** Raspberry Pi is ok, Arduino are mostly 5v, so it needs a level adapter.
+>Please note that the UART I/O are **3.3v only!** Raspberry Pi is ok, Arduino are mostly 5v, so it needs a level adapter.
 
 ### 2.3 - Sentences
 Once the UART connected and LE GPS bonded, you'll receive a stream of ASCII bytes.
